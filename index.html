@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gavin Daniel</title>
+<meta charset="utf-8" />
+<link href="../styles/nav.css" type="text/css" rel="stylesheet" />
+<link href="../styles/main.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../scripts/nav.js"></script>
+</head>
+
+<body id="home-body">
+
+	<div class="topnav" id="myTopnav">
+	  	<a href="home.html" class="active">home</a>
+	  	<a href="contact.html" id="topnav-right">contact</a>
+	  	<a href="shop.html" id="topnav-right">shop</a>
+	  	<a href="graphics.html" id="topnav-right">graphics</a>
+	  	<a href="paintings.html" id="topnav-right">paintings</a>
+	  	<a href="pictures.html" id="topnav-right">pictures</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		    <i class="fa fa-bars"></i>
+	  	</a>
+	</div>
+
+
+	<div class="column">
+		<p class="head"> Welcome to my Point of View</p>
+	</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+</body>
+</html>
