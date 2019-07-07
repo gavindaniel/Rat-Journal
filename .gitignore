@@ -1,0 +1,8 @@
+# Ignore images folder
+images/
+
+# Ignore specific file
+# FILENAME.txt
+
+# Ignore specific types of files
+# .txt
