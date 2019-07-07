@@ -1,5 +1,5 @@
-# Ignore images folder
-images/
+# Ignore local folder
+local/
 
 # Ignore specific file
 # FILENAME.txt
