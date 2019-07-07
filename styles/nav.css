@@ -1,9 +1,19 @@
+#icon {
+  width: 45%;
+  height: 45%;
+  /*border: 1px solid red;*/
+}
+
+
 /* Add a black background color to the top navigation */
 .topnav {
   /*background-color: #333;*/
   overflow: hidden;
   /*float: right;*/
   /*padding: 0px;*/
+  padding: 0px;
+  height: 75px;
+  max-height: 75px;
 }
 
 /* Right-aligned section inside the top navigation */
