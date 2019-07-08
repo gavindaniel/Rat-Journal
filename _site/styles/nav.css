@@ -1,6 +1,6 @@
 #icon {
-  width: 10px;
-  height: 10px;
+  width: 25px;
+  height: 25px;
   /*border: 1px solid red;*/
 }
 
@@ -12,8 +12,8 @@
   /*float: right;*/
   /*padding: 0px;*/
   padding: 0px;
-  height: 55px;
-  max-height: 55px;
+  height: 75px;
+  max-height: 75px;
 }
 
 /* Right-aligned section inside the top navigation */
