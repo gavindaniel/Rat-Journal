@@ -4,6 +4,17 @@
   /*border: 1px solid red;*/
 }
 
+#icon-link {
+
+  float: none;
+  position: absolute;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+
+}
+
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -14,6 +25,7 @@
   padding: 0px;
   height: 75px;
   max-height: 75px;
+  /*width: 100%;*/
 }
 
 /* Right-aligned section inside the top navigation */
@@ -75,14 +87,22 @@
     width: 75px;
     height: 75px;
   }
+  #icon-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
   .topnav {
     height: 100px;
     max-height: 100px;
+    /*text-align: center;*/
+    /*display: inline-block;*/
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive { position: relative; }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
