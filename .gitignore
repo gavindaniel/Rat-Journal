@@ -3,6 +3,7 @@ local/
 
 # Ignore _site folder
 _site/
+
 # Ignore specific file
 # FILENAME.txt
 
