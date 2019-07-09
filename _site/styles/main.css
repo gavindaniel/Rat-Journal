@@ -18,8 +18,8 @@ p.head {
   padding-bottom: 20px;
 }
 
-
-@media screen and (min-width : 750px) and (max-width : 1080px) {
+/*@media screen and (min-width : 750px) and (max-width : 1080px) {*/
+@media screen and (max-width : 1080px) {
   #home-body {
     background-image: url("../images/background/stockholm-iphone-7plus.jpg");
   }

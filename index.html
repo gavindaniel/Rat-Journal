@@ -4,44 +4,52 @@
 <head>
 <title>Gavin  Daniel</title>
 <meta charset="utf-8" />
-<link href="styles/nav.css" type="text/css" rel="stylesheet" />
-<link href="styles/main.css" type="text/css" rel="stylesheet" />
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<script src="/scripts/nav.js"></script>
+
+<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+  	<link  href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!-- Import nav.css -->
+	<link  href="/css/nav.css" type="text/css" rel="stylesheet"/>
+<!-- Import main.css -->
+	<link href="/styles/main.css" type="text/css" rel="stylesheet" />
+<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--JavaScript at end of body for optimized loading-->
+	<script src="/js/materialize.min.js" type="text/javascript"></script>
+	<script src="/scripts/nav.js"></script>
 </head>
 
 <body id="home-body">
 
-	<div class="topnav" id="myTopnav">
-	  	<a href="." class="active" id="icon-link">
-	  		<img id="icon" src="/images/logo/white-small-v2.png">
-	  	</a>
-	  	<a href="/contact/" id="topnav-right">contact</a>
-	  	<a href="/shop/" id="topnav-right">shop</a>
-	  	<a href="/graphics/" id="topnav-right">graphics</a>
-	  	<a href="/paintings/" id="topnav-right">paintings</a>
-	  	<a href="/pictures/" id="topnav-right">pictures</a>
-		<!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()"> -->
-		    <!-- <i class="fa fa-bars"></i> -->
-	  	<!-- </a> -->
-	</div>
+	<nav class="transparent">
+    <div class="nav-wrapper">
+      <a href="." class="brand-logo" id="icon-link">
+        <img id="icon" src="/images/logo/white-small-v2.png">
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/pictures/">pictures</a></li>
+        <li><a href="/paintings/">paintings</a></li>
+        <li><a href="/graphics/">graphics</a></li>
+        <li><a href="/shop/">shop</a></li>
+        <li><a href="/contact/">shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/pictures/">pictures</a></li>
+    <li><a href="/paintings/">paintings</a></li>
+    <li><a href="/graphics/">graphics</a></li>
+    <li><a href="/shop/">shop</a></li>
+    <li><a href="/contact/">shop</a></li>
+  </ul>
 
 
 	<div class="column">
 		<!-- <p class="head"> Welcome to my Point of View</p> -->
 	</div>
-
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
 
 
 </body>

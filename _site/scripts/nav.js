@@ -1,9 +1,12 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav").getElementById("myTopnav-right");
-  if (x.className === "topnav-right") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav-right";
-  }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    // Since we are using default options we use {} instead of options
+    // var instances = M.Sidenav.init(elems, options);
+    var instances = M.Sidenav.init(elems, {});
+  });
+
+  // Or with jQuery
+
+  // $(document).ready(function(){
+  //   $('.sidenav').sidenav();
+  // });
