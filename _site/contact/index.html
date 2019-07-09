@@ -3,23 +3,49 @@
 <head>
 <title>About The Project</title>
 <meta charset="utf-8" />
-<link href="../styles/nav.css" type="text/css" rel="stylesheet" />
-<link href="../styles/contact.css" type="text/css" rel="stylesheet" />
-<!-- <script src="../scripts/myscript.js"></script> -->
+<!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+    <link  href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!-- Import nav.css -->
+  <link  href="../css/nav.css" type="text/css" rel="stylesheet"/>
+<!-- Import pictures.css -->
+  <link href="../styles/pictures.css" type="text/css" rel="stylesheet" />
+<!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--JavaScript at end of body for optimized loading-->
+  <script src="../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../scripts/nav.js"></script>
 </head>
 
 <body id="contact-body">
 
 
   <!-- Top Navigation Bar  -->
-  <div class="topnav" id="myTopnav">
-      <a href=".."><img id="icon" src="../images/logo/white-small-v2.png"></a>
-      <a href="../contact/" id="topnav-right" class="active">contact</a>
-      <a href="../shop/" id="topnav-right">shop</a>
-      <a href="../graphics/" id="topnav-right">graphics</a>
-      <a href="../paintings/" id="topnav-right">paintings</a>
-      <a href="../pictures/" id="topnav-right">pictures</a>
-  </div>
+  <nav class="transparent z-depth-0">
+      <div class="nav-wrapper">
+          <a href=".." class="brand-logo" id="icon-link">
+            <img id="icon" src="../images/logo/white-small-v2.png">
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="topnav">
+            <li><a href="../pictures/">pictures</a></li>
+            <li><a href="../paintings/">paintings</a></li>
+            <li><a href="../graphics/">graphics</a></li>
+            <li><a href="../shop/">shop</a></li>
+            <li><a href="../contact/" class="active">contact</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="..">home</a></li>
+      <li><a href="../pictures/">pictures</a></li>
+      <li><a href="../paintings/">paintings</a></li>
+      <li><a href="../graphics/">graphics</a></li>
+      <li><a href="../shop/">shop</a></li>
+      <li><a href="../contact/">contact</a></li>
+    </ul>
 
 
 	<div class="container">

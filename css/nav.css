@@ -1,6 +1,7 @@
 #icon {
   /*padding-top: 0px;*/
   margin-top: 10px;
+  margin-left: 10px;
   /*display: inline-block;*/
   width: 45px;
   height: 45px;
@@ -18,9 +19,44 @@
 
 }
 
-div .nav-wrapper {
-  border-color: white;
+
+/* Style the links inside the navigation bar */
+#topnav a {
+
+
+  /*float: left;*/
+  display: block;
+  color: #ddd;
+  text-align: center;
+  /*padding: 25px;*/
+  /*font-size: 12px;*/
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(255,255,255,0.4);
+  
+  font-family: sans-serif;
 }
+
+/* Change the color of links on hover */
+#topnav a:hover {
+  /*background-color: #ddd;*/
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+#topnav a.active {
+  /*background-color: #4CAF50;*/
+  color: white;
+}
+
+
+/*nav div ul li:hover {
+   background-color: transparent;
+}*/
+
 
 /*@media screen and (max-width: 1080px) {
   #icon {
