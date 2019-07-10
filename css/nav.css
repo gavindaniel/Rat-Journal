@@ -52,6 +52,22 @@
   color: white;
 }
 
+.sidenav {
+  background-color: #202020; 
+}
+
+#mobile-demo a {
+  color: white;
+}
+
+#mobile-demo a:hover {
+  color: grey;
+}
+
+#mobile-demo a#active {
+  color: grey;
+}
+
 
 /*nav div ul li:hover {
    background-color: transparent;
