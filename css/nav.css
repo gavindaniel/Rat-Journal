@@ -1,29 +1,12 @@
 #icon {
-  /*padding-top: 0px;*/
-  margin-top: 10px;
-  margin-left: 10px;
-  /*display: inline-block;*/
-  width: 45px;
-  height: 45px;
-  /*border: 1px solid red;*/
-
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 35px;
+  height: 35px;
 }
-
-#icon-link {
-
-/*  float: none;
-  position: absolute;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*transform: translate(-50%, -50%);*/
-
-}
-
 
 /* Style the links inside the navigation bar */
 #topnav a {
-
-
   /*float: left;*/
   display: block;
   color: #ddd;
@@ -42,8 +25,8 @@
 
 /* Change the color of links on hover */
 #topnav a:hover {
-  /*background-color: #ddd;*/
   color: white;
+  background-color: transparent;
 }
 
 /* Add an active class to highlight the current page */
@@ -68,19 +51,15 @@
   color: grey;
 }
 
-
-/*nav div ul li:hover {
-   background-color: transparent;
-}*/
-
-
-/*@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
   #icon {
-    width: 35px;
-    height: 35px;
+ /*   width: 35px;
+    height: 35px;*/
+    margin-top: 10px;
+    margin-left: 0px;
   }
 }
-*/
+
 /* Body */
 body {
   /*background-image: url("../images/home/plane.jpg");*/
