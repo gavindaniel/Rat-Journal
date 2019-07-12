@@ -1,8 +1,19 @@
+/* Body */
+body {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
 #icon {
   margin-top: 15px;
   margin-left: 15px;
   width: 35px;
   height: 35px;
+}
+
+nav {
+  background-color: transparent;
 }
 
 /* Style the links inside the navigation bar */
@@ -51,6 +62,35 @@
   color: grey;
 }
 
+.footnav {
+  display: inline-block;
+  padding-right: 20px; 
+}
+
+#copyright {
+  vertical-align: middle;
+  color: #808080;
+}
+
+.foot-link {
+  color: #F5F5F5;
+}
+
+/*Testing*/
+
+/*The sticky class is added to the navbar with JS when it reaches its scroll position*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position: fixed and top: 0)*/
+.sticky + .content {
+  padding-top: 200px;
+}
+
+
 @media screen and (max-width: 1080px) {
   #icon {
  /*   width: 35px;
@@ -58,16 +98,21 @@
     margin-top: 10px;
     margin-left: 0px;
   }
+  .footnav {
+    display: block;
+    padding-bottom: 20px;
+  }
+  #copyright {
+    color: #D3D3D3;
+  }
 }
 
-/* Body */
-body {
-  /*background-image: url("../images/home/plane.jpg");*/
-  /*background-image: url("../images/home/blurry.jpg");*/
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-color: black;
-}
+
+
+
+
+
+
 
 
 

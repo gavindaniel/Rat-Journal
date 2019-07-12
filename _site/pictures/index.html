@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!--JavaScript at end of body for optimized loading-->
 	<script src="../js/materialize.min.js" type="text/javascript"></script>
-	<script src="../scripts/nav.js"></script>
+	<!-- <script src="../scripts/nav.js"></script> -->
 </head>
 
 <body id="pictures-body">
@@ -24,7 +24,8 @@
 	<button onclick="topFunction()" id="myBtn" title="Go to top">^^^</button>
 
 	<!-- Top Navigation Bar  -->
-	<nav class="transparent z-depth-0">
+	<!-- <nav id="navbar" class="transparent z-depth-0"> -->
+	<nav id="navbar" class="z-depth-0">
 	    <div class="nav-wrapper">
 	      	<a href=".." class="brand-logo" id="icon-link">
 	        	<img id="icon" src="../images/logo/white-small-v2.png">
@@ -59,7 +60,12 @@
 	</div> -->
 
 	<!-- Photo Grid -->
+<div class="content">
+	<!-- <div class="row">
+		Welcome to my gallery
+		</div> -->
 	<div class="row"> 
+  		
   		<div class="column">
   			<!-- Amsterdam -->
 		    <!-- <img id="myImg" src="https://drive.google.com/uc?id=1OlmjSrs7iaU5iqbdv34vpUMz49Ps5KtU"> -->
@@ -234,6 +240,7 @@
 	    	
 		</div>
 	</div>
+</div>
 
 
 	<!-- The Modal -->
@@ -280,24 +287,26 @@ span.onclick = function() {
 		  	<div class="col l7 s12">
 			    <ul>
 			    	<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="../pictures/">Pictures</a></li>
+			    		<a class="foot-link" href="../pictures/">Pictures</a></li>
 			    	<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="../paintings/">Paintings</a></li>
+			    		<a class="foot-link" href="../paintings/">Paintings</a></li>
 			    	<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="../graphics/">Graphics</a></li>
+			    		<a class="foot-link" href="../graphics/">Graphics</a></li>
 		    		<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="https://github.com/gavindaniel">GitHub</a></li>
+			    		<a class="foot-link" href="https://github.com/gavindaniel" target="_blank">GitHub</a></li>
 			    	<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gavin-daniel/">LinkedIn</a></li>
+			    		<a class="foot-link" href="https://www.linkedin.com/in/gavin-daniel/" target="_blank">LinkedIn</a></li>
 			    	<li class="footnav">
-			    		<a class="grey-text text-lighten-3" href="../shop/">Shop</a></li>
+			    		<a class="foot-link" href="../shop/">Shop</a></li>
 			    </ul>
 			</div>
 			<div class="col l5 s12">
-		    	<p class="grey-text text-darken-2">Copyright © 2019 Gavin Daniel. All rights reserved.</p>
+		    	<p id="copyright">Copyright © 2019 Gavin Daniel. All rights reserved.</p>
 		  	</div>
 		</div>
 	</div>
 </footer>
+
+<script src="../scripts/nav.js"></script>
 
 </html>

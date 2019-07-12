@@ -1,26 +1,17 @@
-/* body */
-#home-body {
-  /*background-image: url("../images/background/stockholm_v2_2.jpg");*/
-  /*background-image: url("../images/background/sunglasses_small.jpg");*/
-  /*display: flex;
-  min-height: 100vh;
-  flex-direction: column;*/
-}
-
 #background {
   width: 100%;
   height: auto;
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+  flex: 1 0 auto;
+}
 
 div.head {
   /*font-family: sans-serif;*/
@@ -35,32 +26,12 @@ div.head {
   padding-bottom: 20px;
 }
 
-.col {
-  /*width: 33%;*/
-}
-
-.footnav {
-  display: inline-block;
-  padding-right: 20px; 
-  /*color: white;*/
-}
-
-#copyright {
-  vertical-align: middle;
-}
-
 /*@media screen and (min-width : 750px) and (max-width : 1080px) {*/
 @media screen and (max-width : 1080px) {
   #home-body {
     background-image: url("../images/background/sunglasses-iphone-7plus.jpg");
-
   }
   #background {
     visibility: hidden;
   }
-  .footnav {
-    display: block;
-    padding-bottom: 20px;
-  }
-  
 }
