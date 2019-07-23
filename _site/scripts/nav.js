@@ -16,20 +16,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // var instances = M.Sidenav.init(elems, options);
     var instances = M.Sidenav.init(elems, {});
   });
-
-window.onscroll = function() { myFunction() };
-
-
-var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-var sticky = 75;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-    // Add black background-color to navbar 
-  } else {
-    navbar.classList.remove("sticky");
-    // Remove black background-color from navbar
-  }
-}
