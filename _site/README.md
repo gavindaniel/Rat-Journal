@@ -1,1 +1,0 @@
-# My first website as I try to learn more about UI/UX and web development. 
