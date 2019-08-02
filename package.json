@@ -1,5 +1,5 @@
 {
-  "homepage": "https://gavindaniel.github.io/gavindaniel.github.io",
+  "homepage": "https://gavindaniel.github.io/",
   "name": "gavindaniel.github.io",
   "version": "0.1.0",
   "private": true,
@@ -9,11 +9,11 @@
     "react-scripts": "^3.0.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.0"
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
