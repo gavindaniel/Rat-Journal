@@ -1,0 +1,20 @@
+
+/* body */
+#shop-body {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+p.head {
+  /*font-family: sans-serif;*/
+  font-size: 36pt;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  /*vertical-align: middle;*/
+  /*padding-top: 300px;*/
+  /*padding-top: 350px;
+  padding-left: 75px;
+  padding-bottom: 20px;*/
+}

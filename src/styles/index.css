@@ -1,0 +1,37 @@
+#background {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+div.head {
+  /*font-family: sans-serif;*/
+  font-size: 36pt;
+  color: white;
+  font-style: italic;
+  text-align: left;
+  vertical-align: top;
+  /*padding-top: 300px;*/
+  padding-top: 350px;
+  padding-left: 75px;
+  padding-bottom: 20px;
+}
+
+/*@media screen and (min-width : 750px) and (max-width : 1080px) {*/
+@media screen and (max-width : 1080px) {
+  #home-body {
+    background-image: url("../images/background/sunglasses-iphone-7plus.jpg");
+  }
+  #background {
+    visibility: hidden;
+  }
+}

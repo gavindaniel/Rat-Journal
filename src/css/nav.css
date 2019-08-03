@@ -1,0 +1,176 @@
+/* Body */
+body {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#icon {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 35px;
+  height: 35px;
+}
+
+nav {
+  background-color: transparent;
+}
+
+#copyright {
+  font-size: 12px;
+  /*vertical-align: middle;*/
+}
+
+#navbar {
+  position: fixed;
+}
+
+div.content {
+  padding-top: 65px;
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+  /*float: left;*/
+  display: block;
+  color: #ddd;
+  text-align: center;
+  /*padding: 25px;*/
+  /*font-size: 12px;*/
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(255,255,255,0.4);
+  
+  font-family: sans-serif;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+  color: white;
+  background-color: transparent;
+}
+
+/* Add an active class to highlight the current page */
+#topnav a.active {
+  /*background-color: #4CAF50;*/
+  color: white;
+}
+
+.sidenav {
+  background-color: #202020; 
+}
+
+#mobile-demo a {
+  color: white;
+}
+
+#mobile-demo a:hover {
+  color: grey;
+}
+
+#mobile-demo a#active {
+  color: grey;
+}
+
+.footnav {
+  display: inline-block;
+  padding-right: 20px; 
+}
+
+#copyright {
+  /*vertical-align: middle;*/
+  padding-top: 18px;
+  color: #808080;
+}
+
+.foot-link {
+  color: #F5F5F5;
+  font-size: 12px;
+}
+
+/*#foot-links {
+  vertical-align: middle;
+}*/
+
+/*Testing*/
+
+/*The sticky class is added to the navbar with JS when it reaches its scroll position*/
+/*.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}*/
+
+/*Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position: fixed and top: 0)*/
+/*.sticky + .content {
+  padding-top: 200px;
+}*/
+
+
+@media screen and (max-width: 1080px) {
+  #icon {
+ /*   width: 35px;
+    height: 35px;*/
+    /*margin-top: 10px;*/
+    /*margin-left: 0px;*/
+  }
+  .footnav {
+    /*display: block;*/
+    margin-bottom: 20px;
+    /*text-align: center;*/
+    /*padding-right: auto;*/
+
+  }
+  #copyright {
+    color: #D3D3D3;
+    /*text-align: center;*/
+    font-size: 10px;
+  }
+  .container {
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    /*margin-right: 50px;*/
+    /*padding-right: -50px;*/
+  }
+  .foot-link {
+    /*width: 100%;*/
+    /*text-align: center;*/
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #icon {
+ /*   width: 35px;
+    height: 35px;*/
+    /*margin-top: 15px;*/
+    /*margin-left: 0px;*/
+  }
+  .footnav {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-right: 0px;
+  }
+  #copyright {
+    color: #D3D3D3;
+    text-align: center;
+  }
+  .container {
+    /*margin-left: 50px;*/
+    /*margin: 0px;*/
+    /*margin-right: 50px;*/
+    /*padding-right: -50px;*/
+  }
+}
+
+
+
+
+
+
+
+
