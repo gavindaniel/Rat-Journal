@@ -1,0 +1,182 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gavin Daniel</title>
+    <meta charset="utf-8">
+    <!-- To ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> 
+  </head>
+  <body>
+
+    <!-- Top Navigation Bar  -->
+    <!-- Grey with black text -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href=".">
+          <img src="/images/logo/white-small-v2.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> 
+             <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+              </ul>
+            </li>  -->   
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-3">
+      <h3>Collapsible Navbar</h3>
+      <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+      <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+      <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+    </div>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+      
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/pictures/irl/cliffs_small.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/pictures/irl/dublin1_small.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/pictures/ams/boat_small.jpg" alt="New York" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <div class="container-fluid mt-3">
+      <h3>Carousel Example</h3>
+      <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+    </div>
+
+    <div class="container">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+    </div>
+
+    <div class="container-fluid">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container-fluid class.</p>
+      <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>
+    </div>
+
+    <div class="container p-5 my-5 border">
+      <h1>My First Bootstrap Page</h1>
+      <p>This container has a border and some extra padding and margins.</p>
+    </div>
+
+    <div class="container p-5 my-5 bg-dark text-white">
+      <h1>My First Bootstrap Page</h1>
+      <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+    </div>
+
+    <div class="container p-5 my-5 bg-primary text-white">
+      <h1>My First Bootstrap Page</h1>
+      <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+    </div>
+
+     <div class="row">
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+      <div class="col">.col</div>
+    </div> 
+
+     <div class="row">
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3">.col-sm-3</div>
+    </div> 
+
+     <div class="row">
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-8">.col-sm-8</div>
+    </div> 
+
+    <div class="container mt-3">
+      <h2>Rounded Corners</h2>
+      <p>The .rounded class adds rounded corners to an image:</p>            
+      <img src="/images/background/sunglasses_small.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+    </div>
+
+    <div class="container mt-3">
+      <h2>Circle</h2>
+      <p>The .rounded-circle class shapes the image to a circle:</p>            
+      <img src="/images/background/sunglasses_small.jpg" class="rounded-circle" alt="Cinque Terre" width="304" height="236"> 
+    </div>
+
+    <div class="container mt-3">
+      <h2>Thumbnail</h2>
+      <p>The .img-thumbnail class creates a thumbnail of the image:</p>            
+      <img src="/images/background/sunglasses_small.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
+    </div>
+
+    <div class="container mt-3">
+      <h2>Aligning images</h2>
+      <p>Use the float classes to float the image to the left or to the right:</p> 
+      <img src="/images/background/sunglasses_small.jpg" class="float-start" alt="Paris" width="304" height="236"> 
+      <img src="/images/background/sunglasses_small.jpg" class="float-end" alt="Paris" width="304" height="236"> 
+    </div>
+
+    <div class="container mt-3">
+      <h2>Centered Image</h2>
+      <p>Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image:</p> 
+      <img src="/images/background/sunglasses_small.jpg" class="mx-auto d-block" style="width:50%"> 
+    </div>
+
+    <div class="container mt-3">
+      <h2>Image</h2>
+      <p>The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect):</p>
+      <img class="img-fluid" src="/images/background/sunglasses_small.jpg" alt="New York" width="1100" height="500"> 
+    </div>
+  </body>
+</html>
