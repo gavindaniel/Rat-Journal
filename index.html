@@ -12,11 +12,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <!-- custom CSS -->
+    <style type="text/css">
+      body { background: black !important; }
+      hr.footer { border: 1px solid white; }
+      #logo { opacity: 0.5; } 
+      #logo:hover { opacity: 0.8; } 
+    </style>
   </head>
   <body>
 
     <!-- Global Navbar  -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="https://gavindaniel.github.io">
           <img src="/images/logo/white-small-v2.png" alt="Avatar Logo" style="width:30px;" class="rounded-pill"> 
@@ -25,9 +32,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/gallery/">Quests</a>
+              <a class="nav-link" href="https://gavindaniel.github.io/quests/">Quests</a>
             </li>
           </ul>
           <form class="d-flex">

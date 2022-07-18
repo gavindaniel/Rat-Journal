@@ -1,1 +1,1 @@
-# My first website as I try to learn more about UI/UX and web development. 
+# A website for helping EFT players keep track of items they need/have for quests and/or the hideout.
