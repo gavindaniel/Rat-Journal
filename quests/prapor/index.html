@@ -35,6 +35,21 @@
         color:  white;
       }
     </style>
+    <!-- custom JS -->
+    <script>
+      var n = 0;
+
+      function addOne(){
+        n++;
+        // return n;
+        document.getElementById("demo").value = n;
+      }
+      function subOne(){
+        n--;
+        // return n;
+        document.getElementById("demo").value = n;
+      }
+    </script>
   </head>
   <body>
 
@@ -153,11 +168,11 @@
               <div class="btn-group" role="group" aria-label="Basic outlined example">
                 
                 <div class="input-group">
-                  <button type="button" class="btn btn-outline-secondary">-</button>
+                  <button type="button" class="btn btn-outline-secondary" onclick="subFunction()">-</button>
                   <div class="col-md-2">
-                    <input type="text" class="form-control" placeholder="0" aria-label="Quantity">
+                    <input type="text" class="form-control" placeholder="0" aria-label="Quantity" id="demo">
                   </div>
-                  <button type="button" class="btn btn-outline-secondary">+</button>
+                  <button type="button" class="btn btn-outline-secondary" onclick="addFunction()">+</button>
                 </div>
               </div>
             </div>
