@@ -7,7 +7,7 @@
  */
 .bd-navbar{
     padding:.75rem 0;
-    background-color: $dark;
+    background-color: #212529; 
 }
 
 .bd-navbar .navbar-toggler{
@@ -37,7 +37,7 @@
 .bd-subnavbar{
     position:relative;
     z-index:1020;
-    background-color: black;
+    background-color: #000;
     box-shadow:0 0.5rem 1rem rgba(0,0,0,0.05),inset 0 -1px 0 rgba(0,0,0,0.15)
 }
 
