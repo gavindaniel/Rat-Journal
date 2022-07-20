@@ -1,0 +1,24 @@
+body { background: black !important; }
+hr.footer { border: 1px solid white; }
+#logo { opacity: 0.5; } 
+#logo:hover { opacity: 0.8; } 
+.list-group-quest .list-group-item {
+  background-color: black;
+  /*border: 1px solid gray;*/
+  color:  white;
+}
+.list-group-quest {
+  display: inline-block;
+}
+.nav-link-local {
+  font-size:  13px;
+}
+.form-control {
+  background-color: black;
+  border: 1px solid gray;
+  color:  white;
+}
+.image-container {
+  /*display: flex;*/
+  justify-content: center;
+}
