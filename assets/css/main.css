@@ -14,9 +14,9 @@ hr.footer { border: 1px solid white; }
   font-size:  13px;
 }
 .form-control {
-  background-color: black;
+  /*background-color: black;*/
   border: 1px solid gray;
-  color:  white;
+  /*color:  white;*/
 }
 .image-container {
   /*display: flex;*/
