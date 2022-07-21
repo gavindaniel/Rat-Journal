@@ -1,3 +1,5 @@
+/* $dark = #212529 */
+
 body { background: black !important; }
 hr.footer { border: 1px solid white; }
 #logo { opacity: 0.5; } 
@@ -15,15 +17,20 @@ hr.footer { border: 1px solid white; }
 }
 .form-control .ds-input{
   background-color: #e9ecef;
-  border: 1px solid gray;
+  border: 1px solid #212529;
   /*color:  white;*/
 }
 .form-control-text{
   background-color: #000;
-  border: 1px solid gray;
+  border: 1px solid #212529;
   color:  #e9ecef;
 }
 .image-container {
   /*display: flex;*/
   justify-content: center;
+}
+.card {
+  color: white;
+  background-color: black;
+  border-color: #212529;
 }
