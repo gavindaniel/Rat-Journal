@@ -403,6 +403,10 @@
 .bd-toc nav a code{
 font:inherit
 }
+.bd-toc a:hover,.bd-toc a:focus{
+color:  rgba(255, 255, 255, 0.8);
+text-decoration:underline
+}
 .bd-footer a{
 color:#495057;
 text-decoration:none
