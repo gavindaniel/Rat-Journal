@@ -404,12 +404,15 @@
 font:inherit
 }
 .bd-footer a{
-color:#000;
+color:#495057;
 text-decoration:none
 }
 .bd-footer a:hover,.bd-footer a:focus{
-color:#6c757d;
+color:  rgba(255, 255, 255, 0.8);
 text-decoration:underline
+}
+.bd-footer h5 {
+    color:  #495057;
 }
 .bd-example-row .row>.col,.bd-example-row .row>[class^="col-"]{
 padding-top:.75rem;
