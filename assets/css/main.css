@@ -20,6 +20,7 @@ hr.footer { border: 1px solid white; }
   background-color: #000;
   border: 1px solid #6c757d;
   color:  #6c757d;
+  font-display: ;
 }
 .image-container {
   /*display: flex;*/
