@@ -1,4 +1,5 @@
 /* $dark = #212529 */
+/* $secondary = #6c757d */
 
 body { background: black !important; }
 hr.footer { border: 1px solid white; }
@@ -22,8 +23,8 @@ hr.footer { border: 1px solid white; }
 }
 .form-control-text{
   background-color: #000;
-  border: 1px solid #212529;
-  color:  #e9ecef;
+  border: 1px solid #6c757d;
+  color:  #6c757d;
 }
 .image-container {
   /*display: flex;*/
