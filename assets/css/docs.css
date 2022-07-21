@@ -39,7 +39,7 @@
     position:relative;
     z-index:1020;
     background-color: #212529;
-    opacity: 0.5;
+    opacity: 0.8;
     box-shadow:0 0.5rem 1rem rgba(0,0,0,0.05),inset 0 -1px 0 rgba(0,0,0,0.15)
 }
 
