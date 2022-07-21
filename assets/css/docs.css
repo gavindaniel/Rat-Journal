@@ -27,6 +27,7 @@
 
 .bd-navbar .navbar-nav .nav-link.disabled{
     font-weight:600;
+    color:#fff
 }
 
 .bd-navbar .navbar-nav-svg{
