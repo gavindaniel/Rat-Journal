@@ -412,7 +412,7 @@ color:  rgba(255, 255, 255, 0.8);
 text-decoration:underline
 }
 .bd-footer h5 {
-    color:  #495057;
+    color:  #f8f9fa;
 }
 .bd-example-row .row>.col,.bd-example-row .row>[class^="col-"]{
 padding-top:.75rem;
