@@ -17,9 +17,10 @@ hr.footer { border: 1px solid white; }
   font-size:  13px;
 }
 .form-control .ds-input{
-  background-color: #e9ecef;
+  /*#e9ecef*/
+  background-color: #000;
   border: 1px solid #212529;
-  /*color:  white;*/
+  color:  #212529;
 }
 .form-control-text{
   background-color: #000;
