@@ -1,7 +1,7 @@
 /* $dark = #212529 */
 /* $secondary = #6c757d */
 /* tarkov gold = rgb(154,136,102)
-                = 9a8866 */
+                = #9a8866 */
 
 body { background: black !important; }
 hr.footer { border: 1px solid white; }
@@ -18,16 +18,13 @@ hr.footer { border: 1px solid white; }
 .nav-link-local {
   font-size:  13px;
 }
-.form-control-text{
-  background-color: #000;
-  border: 1px solid #6c757d;
-  color:  #6c757d;
-  text-align: center;
-}
 .form-control {
   background-color: #000;
   border: 1px solid #6c757d;
   color:  #6c757d;
+}
+.form-control-text{
+  text-align: center;
 }
 .image-container {
   /*display: flex;*/
