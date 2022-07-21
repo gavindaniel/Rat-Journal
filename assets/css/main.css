@@ -20,7 +20,12 @@ hr.footer { border: 1px solid white; }
   background-color: #000;
   border: 1px solid #6c757d;
   color:  #6c757d;
-  font-display: ;
+  text-align: center;
+}
+.form-control {
+  background-color: #000;
+  border: 1px solid #6c757d;
+  color:  #6c757d;
 }
 .image-container {
   /*display: flex;*/
