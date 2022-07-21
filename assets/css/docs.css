@@ -265,7 +265,7 @@ background-color:#563d7c
 .skippy a{
 color:#fff
 }
-@media (max-width: 567.98px){
+@media (max-width: 467.98px){
 .bd-sidebar{
 margin:0 -.75rem 1rem
 }
@@ -275,7 +275,7 @@ margin:0 -.75rem 1rem
 overflow:auto;
 font-weight:600
 }
-@media (min-width: 568px){
+@media (min-width: 468px){
 .bd-links{
 position:-webkit-sticky;
 position:sticky;
@@ -288,7 +288,7 @@ overflow-y:auto
 }
 
 }
-@media (max-width: 567.98px){
+@media (max-width: 467.98px){
 .bd-links>ul{
 padding:1.5rem .75rem;
 background-color:#f8f9fa;
