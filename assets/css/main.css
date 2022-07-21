@@ -13,8 +13,13 @@ hr.footer { border: 1px solid white; }
 .nav-link-local {
   font-size:  13px;
 }
-.form-control {
+.form-control .ds-input{
   background-color: #e9ecef;
+  border: 1px solid gray;
+  /*color:  white;*/
+}
+.form-control .fc-input{
+  background-color: #000;
   border: 1px solid gray;
   /*color:  white;*/
 }
