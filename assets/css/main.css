@@ -14,7 +14,7 @@ hr.footer { border: 1px solid white; }
   font-size:  13px;
 }
 .form-control {
-  /*background-color: black;*/
+  background-color: #e9ecef;
   border: 1px solid gray;
   /*color:  white;*/
 }
