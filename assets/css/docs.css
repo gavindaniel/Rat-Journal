@@ -91,7 +91,7 @@ padding-right:3.75rem
 }
 .bd-search .form-control:focus{
 border-color:#7952b3;
-box-shadow:0 0 0 3px rgba(121,82,179,0.25)
+box-shadow:0 0 0 3px rgba(154,136,102,0.25)
 }
 .bd-sidebar-toggle{
 color:#6c757d
@@ -100,7 +100,7 @@ color:#6c757d
 color:#7952b3
 }
 .bd-sidebar-toggle:focus{
-box-shadow:0 0 0 3px rgba(121,82,179,0.25)
+box-shadow:0 0 0 3px rgba(154,136,102,0.25)
 }
 .bd-sidebar-toggle .bi-collapse{
 display:none
@@ -315,10 +315,10 @@ border:0
 }
 .bd-links .btn:hover,.bd-links .btn:focus{
 color:rgba(255,255,255,0.85);
-background-color:rgba(121,82,179,0.1)
+background-color:rgba(154,136,102,0.1)
 }
 .bd-links .btn:focus{
-box-shadow:0 0 0 1px rgba(121,82,179,0.7)
+box-shadow:0 0 0 1px rgba(154,136,102,0.7)
 }
 .bd-links .btn::before{
 width:1.25em;
@@ -724,7 +724,7 @@ background-color:#61428f;
 border-color:#61428f
 }
 .btn-bd-primary:focus{
-box-shadow:0 0 0 3px rgba(121,82,179,0.25)
+box-shadow:0 0 0 3px rgba(154,136,102,0.25)
 }
 .btn-bd-download{
 font-weight:600;
@@ -749,7 +749,7 @@ background-color:#fff;
 border-color:#7952b3
 }
 .btn-bd-light:focus{
-box-shadow:0 0 0 3px rgba(121,82,179,0.25)
+box-shadow:0 0 0 3px rgba(154,136,102,0.25)
 }
 .bd-callout{
 padding:1.25rem;
