@@ -39,7 +39,7 @@
     position:relative;
     z-index:1020;
     background-color: #212529;
-    opacity: 0.8;
+    opacity: 0.9;
     box-shadow:0 0.5rem 1rem rgba(0,0,0,0.05),inset 0 -1px 0 rgba(0,0,0,0.15)
 }
 
@@ -265,7 +265,7 @@ background-color:#563d7c
 .skippy a{
 color:#fff
 }
-@media (max-width: 767.98px){
+@media (max-width: 667.98px){
 .bd-sidebar{
 margin:0 -.75rem 1rem
 }
@@ -275,7 +275,7 @@ margin:0 -.75rem 1rem
 overflow:auto;
 font-weight:600
 }
-@media (min-width: 768px){
+@media (min-width: 668px){
 .bd-links{
 position:-webkit-sticky;
 position:sticky;
@@ -288,7 +288,7 @@ overflow-y:auto
 }
 
 }
-@media (max-width: 767.98px){
+@media (max-width: 667.98px){
 .bd-links>ul{
 padding:1.5rem .75rem;
 background-color:#f8f9fa;
