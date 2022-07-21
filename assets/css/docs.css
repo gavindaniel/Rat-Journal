@@ -77,18 +77,18 @@ padding-right:.25rem;
 padding-left:.25rem;
 font-size:.75rem;
 color:#6c757d;
-content:"Ctrl + /";
+content:"Enter";
 border:1px solid #dee2e6;
 border-radius:.125rem
+background-color: #000;
 }
 @media (max-width: 767.98px){
-.bd-search{
-width:100%
-}
-
+    .bd-search{
+        width:100%;
+    }
 }
 .bd-search .form-control{
-padding-right:3.75rem
+    padding-right:3.75rem
 }
 .bd-search .form-control:focus{
 border-color:#7952b3;
