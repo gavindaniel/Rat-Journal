@@ -330,7 +330,7 @@
 .bd-links .btn[aria-expanded="true"]::before{
     transform:rotate(90deg)
 }
-.bd-links .active{
+.bd-links .disabled{
     font-weight:600;
     color:rgba(255,255,255,0.85)
 }
