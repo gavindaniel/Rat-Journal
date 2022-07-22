@@ -104,7 +104,7 @@
     color:#9a8866
 }
 .bd-sidebar-toggle:focus{
-    box-shadow:0 0 0 3px rgba(154,136,102,0.25)
+    box-shadow:0 0 0 3px rgba(154,136,102,0.5)
 }
 .bd-sidebar-toggle .bi-collapse{
     display:none
@@ -308,7 +308,7 @@
 }
 .bd-links .btn:hover,.bd-links .btn:focus{
     color:rgba(255,255,255,0.85);
-    background-color:rgba(154,136,102,0.1)
+    background-color:rgba(154,136,102,0.5)
 }
 .bd-links .btn:focus{
     box-shadow:0 0 0 1px rgba(154,136,102,0.7)
@@ -709,22 +709,10 @@ color:#fff;
 background-color:#61428f;
 border-color:#61428f
 }
-.btn-bd-primary:focus{
-box-shadow:0 0 0 3px rgba(154,136,102,0.25)
-}
-.btn-bd-download{
-font-weight:600;
-color:#ffe484;
-border-color:#ffe484
-}
-.btn-bd-download:hover,.btn-bd-download:active{
-color:#2a2730;
-background-color:#ffe484;
-border-color:#ffe484
-}
-.btn-bd-download:focus{
-box-shadow:0 0 0 3px rgba(255,228,132,0.25)
-}
+/* Delete */
+/*.btn-bd-primary:focus{
+box-shadow:0 0 0 3px rgba(154,136,102,0.5)
+}*/
 .btn-bd-light{
 color:#6c757d;
 border-color:#dee2e6
@@ -734,9 +722,10 @@ color:#9a8866;
 background-color:#fff;
 border-color:#9a8866
 }
-.btn-bd-light:focus{
-box-shadow:0 0 0 3px rgba(154,136,102,0.25)
-}
+/* Delete */
+/*.btn-bd-light:focus{
+box-shadow:0 0 0 3px rgba(154,136,102,0.5)
+}*/
 .bd-callout{
 padding:1.25rem;
 margin-top:1.25rem;
