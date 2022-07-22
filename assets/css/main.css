@@ -27,7 +27,7 @@ hr.footer { border: 1px solid white; }
 }
 .form-control-text{
   text-align: center;
-  width: 50px;
+  max-width: 50px;
   /*max-width: 40px;*/
 }
 .image-container {
