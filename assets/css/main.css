@@ -7,8 +7,8 @@
 
 body { background: black !important; }
 hr.footer { border: 1px solid white; }
-#logo { opacity: 0.5; } 
-#logo:hover { opacity: 0.8; } 
+#logo { opacity: 0.6; } 
+#logo:hover { opacity: 0.9; } 
 .list-group-quest .list-group-item {
   background-color: #000;
   /*border: 1px solid gray;*/
