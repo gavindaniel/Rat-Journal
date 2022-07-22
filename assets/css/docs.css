@@ -355,11 +355,11 @@
 @media (min-width: 768px){ .bd-main{
     display:grid;
     gap:inherit;
-    grid-template-areas:"intro";
+    grid-template-areas:"intro" "toc" "content";
     grid-template-rows:auto auto 1fr
 }}
 @media (min-width: 992px){ .bd-main{
-    grid-template-areas:"intro";
+    grid-template-areas:"intro" "toc" "content toc";
     grid-template-columns:4fr;
     grid-template-rows:auto 1fr
 }}
