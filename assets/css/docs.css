@@ -360,7 +360,7 @@
 }}
 @media (min-width: 992px){ .bd-main{
     grid-template-areas:"intro   toc" "content toc";
-    grid-template-columns:4fr 1fr;
+    grid-template-columns:4fr;
     grid-template-rows:auto 1fr
 }}
 .bd-intro{
