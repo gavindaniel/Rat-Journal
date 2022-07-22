@@ -43,3 +43,8 @@ hr.footer { border: 1px solid white; }
   max-height: 100px;
   object-fit: contain;
 }
+.image-container .img-fluid {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
