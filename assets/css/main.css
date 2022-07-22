@@ -36,7 +36,8 @@ hr.footer { border: 1px solid white; }
 .card {
   color: white;
   background-color: #000;
-  border-color: #6c757d;
+  /*border-color: #6c757d;*/
+  border-color: #000;
 }
 .card-img-top {
   width: 100%;
