@@ -10,9 +10,9 @@ hr.footer { border: 1px solid white; }
 #logo { opacity: 0.5; } 
 #logo:hover { opacity: 0.8; } 
 .list-group-quest .list-group-item {
-  background-color: black;
+  background-color: #000;
   /*border: 1px solid gray;*/
-  color:  white;
+  color:  #fff;
 }
 .list-group-quest {
   display: inline-block;
@@ -34,6 +34,6 @@ hr.footer { border: 1px solid white; }
 }
 .card {
   color: white;
-  background-color: black;
+  background-color: #000;
   border-color: #212529;
 }
