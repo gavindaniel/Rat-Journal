@@ -16,22 +16,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
     <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+    <!-- IndexDB JS -->
+    <script src="/assets/js/index.js" defer></script>
     <!-- custom JS -->
-    <script>
-      var n = 0;
-
-      function addOne(){
-        n++;
-        document.getElementById("pill").innerHTML = n.toString();
-        document.getElementById("disp").value = n;
-      }
-      function subOne(){
-        if (n > 0) {  n--;  } else { n = 0; }
-        
-        document.getElementById("pill").innerHTML = n.toString();
-        document.getElementById("disp").value = n;
-      }
-    </script>
+    <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
 
