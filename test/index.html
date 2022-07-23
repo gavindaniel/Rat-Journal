@@ -4,34 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IndexedDB demo</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="index.js" defer></script>
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <script src="/assets/js/index.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>IndexedDB notes demo</h1>
+      <h1>IndexedDB quests demo</h1>
     </header>
 
     <main>
-      <section class="note-display">
-        <h2>Notes</h2>
+      <section class="quest-display">
+        <h2>Quests</h2>
         <ul>
 
         </ul>
       </section>
-      <section class="new-note">
-        <h2>Enter a new note</h2>
+      <section class="new-quest">
+        <h2>Enter a new quest</h2>
         <form>
           <div>
-            <label for="title">Note title</label>
+            <label for="trader">Trader</label>
+            <input id="trader" type="text" required>
+          </div>
+          <div>
+            <label for="title">Quest title</label>
             <input id="title" type="text" required>
           </div>
           <div>
-            <label for="body">Note text</label>
-            <input id="body" type="text" required>
+            <label for="item">Item title</label>
+            <input id="item" type="text" required>
           </div>
           <div>
-            <button>Create new note</button>
+            <label for="need">Need</label>
+            <input id="need" type="number" min="0" required>
+          </div>
+          <div>
+            <label for="have">Have</label>
+            <input id="have" type="number" min="0" required>
+          </div>
+          <div>
+            <button>Create new quest</button>
           </div>
         </form>
       </section>

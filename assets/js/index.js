@@ -1,3 +1,14 @@
+// Create needed constants
+const list = document.querySelector('ul');
+const traderInput = document.querySelector('#trader');
+const titleInput = document.querySelector('#title');
+const itemInput = document.querySelector('#item');
+const needInput = document.querySelector('#need');
+const haveInput = document.querySelector('#have');
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('form button');
+
+
 // Create an instance of a db object for us to store the open database in
 let db;
 
