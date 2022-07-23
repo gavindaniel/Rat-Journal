@@ -20,12 +20,12 @@ hr.footer { border: 1px solid white; }
 .nav-link-local {
   font-size:  13px;
 }
-.form-control {
+.form-control, input[type="text"]:disabled {
   background-color: #000;
   border: 1px solid #6c757d;
   color:  #6c757d;
 }
-.form-control-text{
+.form-control-text {
   text-align: center;
   max-width: 50px;
   /*max-width: 40px;*/
