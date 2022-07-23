@@ -23,16 +23,18 @@
   <body>
 
     <!-- Global Navbar  -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://gavindaniel.github.io">
-          <img src="/images/logo/white.png" alt="Logo" style="width:30px;" class="rounded-pill" id="logo"> 
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+      <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+        <a class="navbar-brand" href="https://gavindaniel.github.io" id="logo">Logo</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <div class="collapse navbar-collapse" id="bdNavbar">
+          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
             <li class="nav-item">
               <a class="nav-link disabled" href="https://gavindaniel.github.io/quests/">Quests</a>
             </li>
@@ -40,57 +42,626 @@
               <a class="nav-link" href="https://gavindaniel.github.io/hideout/">Hideout</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-secondary" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Local Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="localNavbar">
-      <div class="container-fluid">
-        <span class="navbar-brand text-white">Quests</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar2">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar2">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link disabled" href="https://gavindaniel.github.io/quests/">Overview</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/prapor">Prapor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/therapist">Therapist</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/skier">Skier</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/peacekeeper">Peacekeeper</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/ragman">Ragman</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/jaeger">Jaeger</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gavindaniel.github.io/quests/fence">Fence</a>
+          <hr class="d-md-none text-white-50">
+
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-md-auto">
+              <a class="nav-link p-2" href="https://github.com/gavindaniel" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+                <small class="d-md-none ms-4">GitHub</small>
+              </a>
             </li>
           </ul>
-        </div> 
+        </div>
+      </nav>
+    </header>
+
+    <!-- Search bar -->
+    <!-- <form class="bd-search position-relative me-auto">
+          <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" class="form-control ds-input" id="search-input" placeholder="Search quests..." aria-label="Search quests for..." autocomplete="off" data-bd-docs-version="5.0" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" style="position: relative; vertical-align: top;" dir="auto"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><span class="ds-dropdown-menu" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;" role="listbox" id="algolia-autocomplete-listbox-0"><div class="ds-dataset-1"></div></span></span>
+        </form> -->
+
+    <!-- Sub Navbar -->
+    <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+      <div class="container-xxl d-flex align-items-md-center">
+        <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+            <title>Expand</title>
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+            <title>Collapse</title>
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"></path>
+          </svg>
+        </button>
       </div>
     </nav>
 
-    <div class="p-4 container-fluid bg-black">
-      <h2 class="text-white">Quests</h2>
-      <p></p>
-      <p class="text-white">Placeholder text.</p>
+    
+    <div class="container-xxl my-md-4 bd-layout">
+      <!-- Trader Navbar -->
+      <aside class="bd-sidebar">
+        <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
+          <ul class="list-unstyled mb-0 py-3 pt-md-1">
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+              Prapor
+              </button>
+
+              <div class="collapse" id="getting-started-collapse" style="">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                  <li><a href="/quests/prapor/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+                  <li><a href="/quests/prapor/#debut" class="d-inline-flex align-items-center rounded">Debut</a></li>
+                  <li><a href="/quests/prapor/#ice-cream-cones" class="d-inline-flex align-items-center rounded">Ice Cream Cones</a></li>
+                  <li><a href="/quests/prapor/#punisher-2" class="d-inline-flex align-items-center rounded">The Punisher - Part 2</a></li>
+                  <li><a href="/quests/prapor/#punisher-4" class="d-inline-flex align-items-center rounded">The Punisher - Part 4</a></li>
+                  <li><a href="/quests/prapor/#punisher-5" class="d-inline-flex align-items-center rounded">The Punisher - Part 5</a></li>
+                  <li><a href="/quests/prapor/#punisher-6" class="d-inline-flex align-items-center rounded">The Punisher - Part 6</a></li>
+                  <li><a href="/quests/prapor/#regulated-materials" class="d-inline-flex align-items-center rounded">Regulated Materials</a></li>
+                  <li><a href="/quests/prapor/#no-offence" class="d-inline-flex align-items-center rounded">No Offence</a></li>
+                  <li><a href="/quests/prapor/#our-own-land" class="d-inline-flex align-items-center rounded">Our Own Land</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+                Therapist
+              </button>
+
+              <div class="collapse" id="customize-collapse" style="">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/therapist/#" class="d-inline-flex align-items-center rounded">Overview</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+                Fence
+              </button>
+
+              <div class="collapse" id="layout-collapse">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/fence/#" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+                Skier
+              </button>
+
+              <div class="collapse" id="content-collapse">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/skier/#" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+                Peacekeeper
+              </button>
+
+              <div class="collapse" id="forms-collapse">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/peacekeeper/#" class="d-inline-flex align-items-center rounded">Overview</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+                Mechanic
+              </button>
+
+              <div class="collapse" id="components-collapse">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/mechanic/#" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+                Ragman
+              </button>
+
+              <div class="collapse" id="helpers-collapse">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/ragman/#" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false" aria-current="true">
+                Jaeger
+              </button>
+
+              <div class="collapse" id="utilities-collapse" style="">
+                <ul class="list-unstyled fw-normal pb-1 small">
+                    <li><a href="/quests/jaeger/#" class="d-inline-flex align-items-center rounded">API</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="my-3 mx-4 border-top"></li>
+            <li>
+              <a href="#" class="d-inline-flex align-items-center rounded">
+                Tracking
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="bd-main order-1">
+        <div class="bd-intro ps-lg-4">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-outline-secondary mb-2 mb-md-0" href="https://escapefromtarkov.fandom.com/wiki/Prapor" title="View Trader Wiki" target="_blank">Wiki</a>
+            <h3 class="bd-title text-white" id="content">Prapor</h3>
+          </div>
+          <br>
+          <img src="/assets/img/quest/prapor-portrait.png" alt="Prapor" width="100" height="100">
+        </div>
+
+        <!-- Alert -->
+          <!-- <div class="bd-callout bd-callout-info">
+            <strong>Heads up!</strong> Be sure to <a href="/docs/5.0/layout/grid/">read the Grid page</a> first before diving into how to modify and customize your grid columns.
+          </div> -->
+
+        <div class="bd-content ps-lg-4">
+          <br><br>
+          <!-- Debut -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="debut">Debut<a class="anchorjs-link" aria-label="Anchor" data-anchorjs-icon="#" href="#debut" style="padding-left: 0.75em;"></a>&ensp;<span class="badge bg-success">Completed</span></h4>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <img src="/assets/img/quest/mp-133.png" class="card-img-top rounded-start" alt="MP-133 Shotgun" id="mp-133">
+                <div class="card-body">
+                  <h6 class="card-title">
+                    <!-- <span class="badge bg-secondary">2</span> -->
+                    MP-133 12ga pump-action shotgun&ensp;
+                    <span class="badge bg-success rounded-pill"><span id="pill">0</span>/2</span>
+                  </h6>
+                  <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <div class="input-group">
+                      <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                      <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity" name="debutNum" id="disp" disabled>
+                      <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- Ice Cream Cones -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="ice-cream-cones">Ice Cream Cones<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#ice-cream-cones" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-warning text-black">Active</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-2 image-container">
+                    <img src="/assets/img/quest/6L31-60-mag.png" class="img-fluid rounded-start" alt="6L31 60-round mag.">
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body">
+                      <h6 class="card-title">AK-74 5.45x39 6L31 60-round magazine&ensp;
+                        <span class="badge bg-danger rounded-pill">0/3</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- The Punisher - Part 2 -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="punisher-2">The Punisher - Part 2<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#punisher-2" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/lower-half-mask.png" class="img-fluid rounded-start" alt="lower half mask">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">Lower half-mask&ensp;
+                        <span class="badge bg-danger rounded-pill">0/7</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- The Punisher - Part 4 -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="punisher-4">The Punisher - Part 4<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#punisher-4" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/A-2607-Bars.png" class="img-fluid rounded-start" alt="A-2607 Bars knife">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">Bars A-2607 95H18 knife&ensp;
+                        <span class="badge bg-danger rounded-pill">0/5</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- The Punisher - Part 5 -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="punisher-5">The Punisher - Part 5<a class="anchorjs-link" aria-label="Anchor" data-anchorjs-icon="#" href="#punisher-5" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-6 image-container">
+                    <img src="/assets/img/quest/AK-74N.png" class="img-fluid rounded-start" alt="AK-74N">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h6 class="card-title">AK-74N assault rifle&ensp;
+                        <span class="badge bg-danger rounded-pill">0/1</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-6 image-container">
+                    <img src="/assets/img/quest/M4A1.png" class="img-fluid rounded-start" alt="M4A1 Standard">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h6 class="card-title">M4A1 assault rifle&ensp;
+                        <span class="badge bg-danger rounded-pill">0/1</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-6 image-container">
+                    <img src="/assets/img/quest/PM.png" class="img-fluid rounded-start" alt="PM pistol">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h6 class="card-title">PM 9x18PM pistols&ensp;
+                        <span class="badge bg-danger rounded-pill">0/2</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- The Punisher - Part 6 -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="punisher-6">The Punisher - Part 6<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#punisher-6" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/bear-dogtags.png" class="img-fluid rounded-start" alt="BEAR PMC dogtags">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">BEAR PMC dogtags&ensp;
+                        <span class="badge bg-danger rounded-pill">0/7</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/usec-dogtags.png" class="img-fluid rounded-start" alt="BEAR PMC dogtags">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">USEC PMC dogtags&ensp;
+                        <span class="badge bg-danger rounded-pill">0/7</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- Regulated Materials -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="regulated-materials">Regulated Materials<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#regulated-materials" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/tank-batt.png" class="img-fluid rounded-start" alt="Tank Battery">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">6-STEN-140-M military battery&ensp;
+                        <span class="badge bg-danger rounded-pill">0/1</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-2 image-container">
+                    <img src="/assets/img/quest/30x160mm-shell.png" class="img-fluid rounded-start" alt="30x160mm shell">
+                  </div>
+                  <div class="col-md-10">
+                    <div class="card-body">
+                      <h6 class="card-title">OFZ 30x160mm shells&ensp;
+                        <span class="badge bg-danger rounded-pill">0/5</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity" id="demo">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- No Offence -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="no-offence">No Offence<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#no-offence" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/M67.png" class="img-fluid rounded-start" alt="M67 grenade">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">M67 grenades&ensp;
+                        <span class="badge bg-danger rounded-pill">0/10</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- Our Own Land -->
+          <div class="row row-cols-auto justify-content-start pb-2">
+            <div class="col">
+              <h4 class="text-white" id="our-own-land">Our Own Land<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#our-own-land" style="padding-left: 0.375em;"></a>&emsp;<span class="badge bg-secondary">Inactive</span></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-3 image-container">
+                    <img src="/assets/img/quest/usec-dogtags.png" class="img-fluid rounded-start" alt="USEC PMC dogtag">
+                  </div>
+                  <div class="col-md-9">
+                    <div class="card-body">
+                      <h6 class="card-title">USEC PMC dogtags&ensp;
+                        <span class="badge bg-danger rounded-pill">0/20</span>
+                      </h6>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        
+                        <div class="input-group">
+                          <button type="button" class="btn btn-outline-secondary" onclick="subOne()">&nbsp;-&nbsp;</button>
+                          <input type="text" class="form-control form-control-text" placeholder="0" aria-label="Quantity" id="demo">
+                          <button type="button" class="btn btn-outline-secondary" onclick="addOne()">&nbsp;+&nbsp;</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br>
+        
+        </div> 
+        <!-- end of content div -->
+      </main>
     </div>
+
+    <!-- py-5 mt-5 -->
+    <footer class="bd-footer bg-dark">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <ul class="list-unstyled small text-muted">
+              <li class="mb-2">An open source project designed and built by <a href="#">Mustache Man</a> for all my fellow PMCs.</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="/quests/">Quests</a></li>
+              <li class="mb-2"><a href="/hideout/">Hideout</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Guides</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki">Fandom Wiki</a></li>
+              <li class="mb-2"><a href="https://tarkov-market.com/">Tarkov Market</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Community</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="https://github.com/gavindaniel/gavindaniel.github.io/issues">Issues</a></li>
+              <li class="mb-2"><a href="https://github.com/gavindaniel/gavindaniel.github.io/discussions">Discussions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
