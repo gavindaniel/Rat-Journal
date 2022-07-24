@@ -56,7 +56,7 @@ function addData(e) {
   // prevent default - we don't want the form to submit in the conventional way
   e.preventDefault();
   // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-  const newItem = { trader: traderInput.value, title: titleInput.value, item: itemInput.value, need: needInput.value, have: haveInput.value };
+  const newItem = { trader: traderInput.value, title: titleInput.value, item: itemInput.value, need: parseInt(needInput.value), have: parseInt(haveInput.value) };
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['quests_os'], 'readwrite');
   // call an object store that's already been added to the database
