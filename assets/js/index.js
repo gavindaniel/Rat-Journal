@@ -115,7 +115,45 @@ function deleteItem(e) {
 
 
 
-function editItem(e) {
+function addItem(e) {
+  // retrieve the name of the task we want to delete. We need
+  // to convert it to a number before trying to use it with IDB; IDB key
+  // values are type-sensitive.
+  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
+
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const request = objectStore.get(questId);
+
+  request.onerror = (event) => {
+    // Handle errors!
+    console.log('Transaction not opened due to error');
+  };
+  request.onsuccess = (event) => {
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update the value(s) in the object that you want to change
+    data.have = haveInput.value;
+
+    // Put this updated object back into the database.
+    const requestUpdate = objectStore.put(data);
+    requestUpdate.onerror = (event) => {
+       // Do something with the error
+       console.log('Failed to updated data.');
+    };
+    requestUpdate.onsuccess = (event) => {
+       // Success - the data is updated!
+       console.log('Success - the data is updated!');
+    };
+  };
+
+}
+
+
+
+function subItem(e) {
   // retrieve the name of the task we want to delete. We need
   // to convert it to a number before trying to use it with IDB; IDB key
   // values are type-sensitive.
@@ -189,9 +227,27 @@ function displayData() {
       listItem.setAttribute('data-quest-id', cursor.value.id);
 
       // Create a button and place it inside each listItem
+      const addBtn = document.createElement('button');
+      listItem.appendChild(addBtn);
+      addBtn.textContent = ' + ';
+
+      // Create a button and place it inside each listItem
+      const subBtn = document.createElement('button');
+      listItem.appendChild(subBtn);
+      subBtn.textContent = ' _ ';
+
+      // Create a button and place it inside each listItem
       const deleteBtn = document.createElement('button');
       listItem.appendChild(deleteBtn);
       deleteBtn.textContent = 'Delete';
+
+      // Set an event handler so that when the button is clicked, the deleteItem()
+      // function is run
+      addBtn.addEventListener('click', addItem);
+
+      // Set an event handler so that when the button is clicked, the deleteItem()
+      // function is run
+      subBtn.addEventListener('click', subItem);
 
       // Set an event handler so that when the button is clicked, the deleteItem()
       // function is run
