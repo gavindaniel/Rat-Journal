@@ -212,15 +212,18 @@ function displayData() {
       // structure the HTML fragment, and append it inside the list
       const listItem = document.createElement('li');
       const h3 = document.createElement('h3');
-      const para = document.createElement('p');
+      const para1 = document.createElement('p');
+      const para2 = document.createElement('p');
 
       listItem.appendChild(h3);
-      listItem.appendChild(para);
+      listItem.appendChild(para1);
+      listItem.appendChild(para2);
       list.appendChild(listItem);
 
       // Put the data from the cursor inside the h3 and para
       h3.textContent = cursor.value.title;
-      para.textContent = cursor.value.trader;
+      para1.textContent = cursor.value.trader;
+      para1.textContent = cursor.value.have;
 
       // Store the ID of the data item inside an attribute on the listItem, so we know
       // which item it corresponds to. This will be useful later when we want to delete items
