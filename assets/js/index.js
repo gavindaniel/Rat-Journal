@@ -237,7 +237,7 @@ function displayData() {
       // Create a button and place it inside each listItem
       const subBtn = document.createElement('button');
       listItem.appendChild(subBtn);
-      subBtn.textContent = ' _ ';
+      subBtn.textContent = ' - ';
 
       // Create a button and place it inside each listItem
       const deleteBtn = document.createElement('button');
