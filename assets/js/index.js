@@ -135,7 +135,7 @@ function addItem(e) {
     const data = event.target.result;
 
     // update the value(s) in the object that you want to change
-    data.have = data.have + 1;
+    data.have = 1;
 
     // Put this updated object back into the database.
     const requestUpdate = objectStore.put(data);
