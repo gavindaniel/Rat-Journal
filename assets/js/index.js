@@ -68,8 +68,8 @@ function addData(e) {
     traderInput.value = '';
     titleInput.value = '';
     itemInput.value = '';
-    needInput.value = '';
-    haveInput.value = '';
+    needInput.value = 0;
+    haveInput.value = 0;
   });
 
   // Report on the success of the transaction completing, when everything is done
@@ -135,7 +135,7 @@ function addItem(e) {
     const data = event.target.result;
 
     // update the value(s) in the object that you want to change
-    data.have = 1;
+    data.have = data.have + 1;
 
     // Put this updated object back into the database.
     const requestUpdate = objectStore.put(data);
