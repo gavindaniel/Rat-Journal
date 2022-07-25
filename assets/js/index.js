@@ -221,6 +221,7 @@ function addOne() {
       console.log('Success - the data is updated!');
       // update the display of data to show the newly added item, by running displayData() again.
       displayData();
+      populateData();
     };
   };
 }
@@ -253,6 +254,7 @@ function subOne() {
       console.log('Success - the data is updated!');
       // update the display of data to show the newly added item, by running displayData() again.
       displayData();
+      populateData();
     };
   };
 }
@@ -260,10 +262,29 @@ function subOne() {
 
 // Define the populateData function
 function populateData() {
-  // const element = document.getElementById("myBtn");
+  // const element = document.getElementById("disp-debut");
   // element.addEventListener("click", function() {
   //   document.getElementById("demo").innerHTML = "Hello World";
   // });
+
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const index = objectStore.index("title");
+
+  index.get("Debut").onsuccess = (event) => {
+    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
+
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update displays
+    document.getElementById("pill-debut").innerHTML = data.have;
+    document.getElementById("disp-debut").innerHTML = data.have;
+    // update the value(s) in the object that you want to change
+  };
+
+
 }
 
 
