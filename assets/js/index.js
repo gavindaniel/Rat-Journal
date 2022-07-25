@@ -207,7 +207,40 @@ function addOne() {
     const data = event.target.result;
 
     // update the value(s) in the object that you want to change
-    data.have = data.have + 1;
+    if (data.have < data.need) { data.have = data.have + 1;
+    } else {  data.have = data.need; }
+
+    // Put this updated object back into the database.
+    const requestUpdate = objectStore.put(data);
+    requestUpdate.onerror = (event) => {
+       // Do something with the error
+       console.log('Failed to updated data.');
+    };
+    requestUpdate.onsuccess = (event) => {
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
+    };
+  };
+}
+
+
+function subOne() {
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const index = objectStore.index("title");
+
+  index.get("Debut").onsuccess = (event) => {
+    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
+
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update the value(s) in the object that you want to change
+    if (data.have > 0) { data.have = data.have - 1;
+    } else {  data.have = 0; }
 
     // Put this updated object back into the database.
     const requestUpdate = objectStore.put(data);
