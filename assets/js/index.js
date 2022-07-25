@@ -96,35 +96,6 @@ function addData(e) {
 }
 
 
-// Define the addData() function
-function addQuest(quest) {
-  // prevent default - we don't want the form to submit in the conventional way
-  // e.preventDefault();
-  // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-  const newItem = { trader: quest.trader.value, title: quest.title.value, item: quest.item.value, need: quest.need, have: quest.have };
-  // open a read/write db transaction, ready for adding the data
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  // call an object store that's already been added to the database
-  const objectStore = transaction.objectStore('quests_os');
-  // Make a request to add our newItem object to the object store
-  const addRequest = objectStore.add(newItem);
-  // addRequest.addEventListener('success', () => {
-
-  // });
-
-  // Report on the success of the transaction completing, when everything is done
-  transaction.addEventListener('complete', () => {
-    console.log('Transaction completed: database modification finished.');
-
-    // update the display of data to show the newly added item, by running displayData() again.
-    displayData();
-    populateData();
-  });
-
-  transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
-}
-
-
 
 // Define the deleteItem() function
 function deleteItem(e) {
@@ -337,6 +308,35 @@ function addPraporQuests() {
   addQuest(quest11);
   addQuest(quest12);
   addQuest(quest13);
+}
+
+
+// Define the addData() function
+function addQuest(quest) {
+  // prevent default - we don't want the form to submit in the conventional way
+  // e.preventDefault();
+  // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
+  const newItem = { trader: quest.trader, title: quest.title, item: quest.item, need: quest.need, have: quest.have };
+  // open a read/write db transaction, ready for adding the data
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  // call an object store that's already been added to the database
+  const objectStore = transaction.objectStore('quests_os');
+  // Make a request to add our newItem object to the object store
+  const addRequest = objectStore.add(newItem);
+  // addRequest.addEventListener('success', () => {
+
+  // });
+
+  // Report on the success of the transaction completing, when everything is done
+  transaction.addEventListener('complete', () => {
+    console.log('Transaction completed: database modification finished.');
+
+    // update the display of data to show the newly added item, by running displayData() again.
+    displayData();
+    populateData();
+  });
+
+  transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
 }
 
 
