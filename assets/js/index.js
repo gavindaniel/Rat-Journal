@@ -47,9 +47,9 @@ openRequest.addEventListener('upgradeneeded', e => {
   console.log('Database setup complete');
 
   // add Prapor Quests to database
-  console.log('Adding Prapor quests to database...');
-  addPraporQuests();
-  console.log('Prapor Quests setup complete.');
+  // console.log('Adding Prapor quests to database...');
+  // addPraporQuests();
+  // console.log('Prapor Quests setup complete.');
 });
 
 
