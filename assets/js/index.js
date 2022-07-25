@@ -13,7 +13,7 @@ let db;
 
 // Open our database; it is created if it doesn't already exist
 // (see the upgradeneeded handler below)
-const openRequest = window.indexedDB.open('quests_db', 1);
+const openRequest = window.indexedDB.open('quests_db', 2);
 
 
 // error handler signifies that the database didn't open successfully
@@ -47,9 +47,9 @@ openRequest.addEventListener('upgradeneeded', e => {
   console.log('Database setup complete');
 
   // add Prapor Quests to database
-  // console.log('Adding Prapor quests to database...');
-  // addPraporQuests();
-  // console.log('Prapor Quests setup complete.');
+  console.log('Adding Prapor quests to database...');
+  addPraporQuests();
+  console.log('Prapor Quests setup complete.');
 });
 
 
