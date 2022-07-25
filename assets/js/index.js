@@ -7,13 +7,15 @@ const needInput = document.querySelector('#need');
 const haveInput = document.querySelector('#have');
 const form = document.querySelector('form');
 const submitBtn = document.querySelector('form button');
+// custom
+const questBtn = document.querySelector('#questBtn');
 
 // Create an instance of a db object for us to store the open database in
 let db;
 
 // Open our database; it is created if it doesn't already exist
 // (see the upgradeneeded handler below)
-const openRequest = window.indexedDB.open('quests_db', 2);
+const openRequest = window.indexedDB.open('quests_db', 1);
 
 
 // error handler signifies that the database didn't open successfully
@@ -56,6 +58,9 @@ openRequest.addEventListener('upgradeneeded', e => {
 // Create a submit event handler so that when the form is submitted the addData() function is run
 form.addEventListener('submit', addData);
 
+// Create a submit event handler so that when the form is submitted the addData() function is run
+questBtn.addEventListener("click", addPraporQuests);
+
 
 // Define the addData() function
 function addData(e) {
@@ -84,6 +89,7 @@ function addData(e) {
 
     // update the display of data to show the newly added item, by running displayData() again.
     displayData();
+    populateData();
   });
 
   transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
@@ -112,6 +118,7 @@ function addQuest(quest) {
 
     // update the display of data to show the newly added item, by running displayData() again.
     displayData();
+    populateData();
   });
 
   transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
@@ -224,6 +231,7 @@ function subItem(e) {
       console.log('Success - the data is updated!');
       // update the display of data to show the newly added item, by running displayData() again.
       displayData();
+      populateData();
     };
   };
 
