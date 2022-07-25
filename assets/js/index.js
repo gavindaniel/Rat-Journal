@@ -147,6 +147,7 @@ function addItem(e) {
       console.log('Success - the data is updated!');
       // update the display of data to show the newly added item, by running displayData() again.
       displayData();
+      populateData();
     };
   };
 
@@ -262,11 +263,6 @@ function subOne() {
 
 // Define the populateData function
 function populateData() {
-  // const element = document.getElementById("disp-debut");
-  // element.addEventListener("click", function() {
-  //   document.getElementById("demo").innerHTML = "Hello World";
-  // });
-
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
@@ -279,19 +275,12 @@ function populateData() {
     const data = event.target.result;
 
     // update displays
-    document.getElementById("pill-debut").innerHTML = data.have;
-    document.getElementById("disp-debut").innerHTML = data.have;
-    // update the value(s) in the object that you want to change
+    document.getElementById("pill-debut").innerHTML = data.have.toString();
+    document.getElementById("disp-debut").value  = data.have;
   };
 
 
 }
-
-
-// Define
-// function addEventListeners() {
-//   const 
-// }
 
 
 
