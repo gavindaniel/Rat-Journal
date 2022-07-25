@@ -115,11 +115,11 @@ function deleteItem(e) {
 
 
 
-function addItem(e) {
+function addItem(id) {
   // retrieve the name of the task we want to delete. We need
   // to convert it to a number before trying to use it with IDB; IDB key
   // values are type-sensitive.
-  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
+  const questId = Number(id);
 
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
