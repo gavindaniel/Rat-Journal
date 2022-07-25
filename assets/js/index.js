@@ -26,6 +26,7 @@ openRequest.addEventListener('success', () => {
   db = openRequest.result;
   // Run the displayData() function to display the notes already in the IDB
   displayData();
+  populateData();
 });
 
 
