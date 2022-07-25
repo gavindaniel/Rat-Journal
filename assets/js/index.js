@@ -144,8 +144,10 @@ function addItem(e) {
        console.log('Failed to updated data.');
     };
     requestUpdate.onsuccess = (event) => {
-       // Success - the data is updated!
-       console.log('Success - the data is updated!');
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
     };
   };
 
@@ -177,13 +179,16 @@ function subItem(e) {
 
     // Put this updated object back into the database.
     const requestUpdate = objectStore.put(data);
+
     requestUpdate.onerror = (event) => {
        // Do something with the error
        console.log('Failed to updated data.');
     };
     requestUpdate.onsuccess = (event) => {
-       // Success - the data is updated!
-       console.log('Success - the data is updated!');
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
     };
   };
 
