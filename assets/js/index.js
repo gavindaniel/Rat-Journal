@@ -277,7 +277,7 @@ function populateData() {
 
     // update displays
     document.getElementById("pill-debut").innerHTML = data.have.toString();
-    document.getElementById("disp-debut").value  = ParseInt(data.have);
+    document.getElementById("disp-debut").value  = data.have;
   };
 
 
