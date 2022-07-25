@@ -84,7 +84,6 @@ function addData(e) {
 }
 
 
-
 // Define the deleteItem() function
 function deleteItem(e) {
   // retrieve the name of the task we want to delete. We need
@@ -115,11 +114,11 @@ function deleteItem(e) {
 
 
 
-function addItem(id) {
+function addItem(e) {
   // retrieve the name of the task we want to delete. We need
   // to convert it to a number before trying to use it with IDB; IDB key
   // values are type-sensitive.
-  const questId = Number(id);
+  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
 
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
@@ -193,6 +192,52 @@ function subItem(e) {
   };
 
 }
+
+
+function addOne() {
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const index = objectStore.index("title");
+
+  index.get("Debut").onsuccess = (event) => {
+    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
+
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update the value(s) in the object that you want to change
+    data.have = data.have + 1;
+
+    // Put this updated object back into the database.
+    const requestUpdate = objectStore.put(data);
+    requestUpdate.onerror = (event) => {
+       // Do something with the error
+       console.log('Failed to updated data.');
+    };
+    requestUpdate.onsuccess = (event) => {
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
+    };
+  };
+}
+
+
+// Define the populateData function
+function populateData() {
+  // const element = document.getElementById("myBtn");
+  // element.addEventListener("click", function() {
+  //   document.getElementById("demo").innerHTML = "Hello World";
+  // });
+}
+
+
+// Define
+// function addEventListeners() {
+//   const 
+// }
 
 
 
