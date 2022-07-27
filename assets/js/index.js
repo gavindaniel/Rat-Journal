@@ -23,6 +23,8 @@ openRequest.addEventListener('success', () => {
   console.log('Database opened successfully');
   // Store the opened database object in the db variable. This is used a lot below
   db = openRequest.result;
+  // set the IDs for all necessary elements
+  // setPillIDs();
   // Run the displayData() function to display the notes already in the IDB
   populateData();
 });
@@ -171,21 +173,36 @@ function updateData(questTitle) {
 
 // Define the populateData function
 function populateData() {
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("title");
+  // create index var, start at 1 for first quest
+  var i = 1;
+  //loop through all elements and fill in data
+  const objectStore = db.transaction('quests_os').objectStore('quests_os');
+  objectStore.openCursor().addEventListener('success', e => {
+    // Get a reference to the cursor
+    const cursor = e.target.result;
 
-  index.get("Debut").onsuccess = (event) => {
-    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
+    if(cursor) {
+      // do something
+      document.getElementById("pill-" + i).innerHTML = cursor.value.have.toString();
+      document.getElementById("disp-" + i).value  = cursor.value.have.toString();
 
-    // Get the old value that we want to update
-    const data = event.target.result;
-
-    // update display - Debut
-    document.getElementById("pill-debut").innerHTML = data.have.toString();
-    document.getElementById("disp-debut").value  = data.have.toString();
+      // iterate to the next quest
+      cursor.continue();
+      i++;
+    } else {
+    // do something
+    }
   };
+}
+
+
+
+function setPillIDs {
+  // get all the elements
+  const elements = document.querySelectorAll('.pill');
+
+  // set their ids
+  for (var i = 0; i < abcElements.length; i++) { elements[i].id = 'pill-' + i; }
 }
 
 
