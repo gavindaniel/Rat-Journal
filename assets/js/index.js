@@ -209,14 +209,15 @@ function subItem(e) {
 }
 
 
-function addOne() {
+function addOne(questTitle) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
   const index = objectStore.index("title");
+  // Success - the data is updated!
+  console.log('Finding quest ' + questTitle ' in index...');
 
-  index.get("Debut").onsuccess = (event) => {
-    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
+  index.get(questTitle).onsuccess = (event) => {
 
     // Get the old value that we want to update
     const data = event.target.result;
