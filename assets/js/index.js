@@ -215,7 +215,7 @@ function addOne(questTitle) {
   const objectStore = transaction.objectStore('quests_os');
   const index = objectStore.index("title");
   // Success - the data is updated!
-  console.log('Finding quest ' + questTitle ' in index...');
+  console.log('Finding quest ' + questTitle + ' in index...');
 
   index.get(questTitle).onsuccess = (event) => {
 
