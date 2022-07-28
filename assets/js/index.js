@@ -35,7 +35,7 @@ openRequest.addEventListener('upgradeneeded', e => {
   db = e.target.result;
   // Create an objectStore to store our notes in (basically like a single table)
   // including a auto-incrementing key
-  const objectStore = db.createObjectStore('quests_os', { keyPath: 'id', autoIncrement:true });
+  const objectStore = db.createObjectStore('quests_os', { keyPath: 'id', autoIncrement:false });
   // Define what data items the objectStore will contain
   objectStore.createIndex('trader', 'trader', { unique: false });
   objectStore.createIndex('title', 'title', { unique: false });
