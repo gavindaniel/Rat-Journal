@@ -155,7 +155,7 @@ function populateData() {
 
     if(cursor) {
       // do something
-      document.getElementById("pill-" + i).innerHTML = cursor.value.have.toString();
+      document.getElementById("pill-" + i).innerHTML = cursor.value.have.toString() + "/" + cursor.value.need.toString();
       document.getElementById("disp-" + i).value  = cursor.value.have.toString();
 
       // iterate to the next quest
