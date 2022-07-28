@@ -141,7 +141,10 @@ function populateData() {
       if (cursor.value.have == cursor.value.need) {
         $( "#pill-" + i ).removeClass( "bg-danger" ).addClass( "bg-success" );
       } else { 
-        // do something
+        // check if pill class is success, if true, change back to red
+        if ($( "#pill-" + i ).hasClass( "bg-success" )) {
+          $( "#pill-" + i ).removeClass( "bg-success" ).addClass( "bg-danger" );
+        }
       }
 
       // iterate to the next quest
