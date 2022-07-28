@@ -192,7 +192,7 @@ function populateData() {
     } else {
     // do something
     }
-  };
+  });
 }
 
 
