@@ -197,7 +197,7 @@ function populateData() {
 
 
 
-function setPillIDs {
+function setPillIDs() {
   // get all the elements
   const elements = document.querySelectorAll('.pill');
 
