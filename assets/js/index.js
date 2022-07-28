@@ -52,44 +52,12 @@ openRequest.addEventListener('upgradeneeded', e => {
 });
 
 
-// Create a submit event handler so that when the form is submitted the addData() function is run
-questBtn.addEventListener("click", addPraporQuests);
-
-
-// Define the deleteItem() function
-function deleteItem(e) {
-  // retrieve the name of the task we want to delete. We need
-  // to convert it to a number before trying to use it with IDB; IDB key
-  // values are type-sensitive.
-  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
-
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  const objectStore = transaction.objectStore('quests_os');
-  const deleteRequest = objectStore.delete(questId);
-
-  // report that the data item has been deleted
-  transaction.addEventListener('complete', () => {
-    // delete the parent of the button
-    // which is the list item, so it is no longer displayed
-    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-    console.log(`Quest ${questId} deleted.`);
-
-    // Again, if list item is empty, display a 'No notes stored' message
-    if(!list.firstChild) {
-      const listItem = document.createElement('li');
-      listItem.textContent = 'No notes stored.';
-      list.appendChild(listItem);
-    }
-  });
-}
-
 
 function addOne(questID) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("id");
+  const index = objectStore.index('id');
 
   console.log('Finding quest ' + questID + ' in index...');
   index.get(questID).onsuccess = (event) => {
@@ -120,7 +88,7 @@ function subOne(questID) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("id");
+  const index = objectStore.index('id');
 
   console.log('Finding quest ' + questID + ' in index...');
   index.get(questID).onsuccess = (event) => {
@@ -201,19 +169,19 @@ function addPraporQuests() {
   // prevent default - we don't want the form to submit in the conventional way
   // e.preventDefault();
   // create quest objects to add to the database
-  const quest01 = { trader: "Prapor", title: "Debut", item: "MP-133 12ga pump-action shotgun", need: 2, have: 0 };
-  const quest02 = { trader: "Prapor", title: "Ice Cream Cones", item: "AK-74 5.45x39 6L31 60-round magazine", need: 3, have: 0 };
-  const quest03 = { trader: "Prapor", title: "The Punisher - Part 2", item: "Lower half-mask", need: 7, have: 0 };
-  const quest04 = { trader: "Prapor", title: "The Punisher - Part 4", item: "Bars A-2607 95H18 knife", need: 5, have: 0 };
-  const quest05 = { trader: "Prapor", title: "The Punisher - Part 5", item: "AK-74N assault rifle", need: 1, have: 0 };
-  const quest06 = { trader: "Prapor", title: "The Punisher - Part 5", item: "M4A1 assault rifle", need: 1, have: 0 };
-  const quest07 = { trader: "Prapor", title: "The Punisher - Part 5", item: "PM 9x18PM pistols", need: 2, have: 0 };
-  const quest08 = { trader: "Prapor", title: "The Punisher - Part 6", item: "BEAR PMC dogtags", need: 7, have: 0 };
-  const quest09 = { trader: "Prapor", title: "The Punisher - Part 6", item: "USEC PMC dogtags", need: 7, have: 0 };
-  const quest10 = { trader: "Prapor", title: "Regulated Materials", item: "6-STEN-140-M military battery", need: 1, have: 0 };
-  const quest11 = { trader: "Prapor", title: "Regulated Materials", item: "OFZ 30x160mm shells", need: 5, have: 0 };
-  const quest12 = { trader: "Prapor", title: "No Offence", item: "Lower half-mask", need: 10, have: 0 };
-  const quest13 = { trader: "Prapor", title: "Our Own Land", item: "Lower half-mask", need: 20, have: 0 };
+  const quest01 = { id: 1, trader: "Prapor", title: "Debut", item: "MP-133 12ga pump-action shotgun", need: 2, have: 0 };
+  const quest02 = { id: 2, trader: "Prapor", title: "Ice Cream Cones", item: "AK-74 5.45x39 6L31 60-round magazine", need: 3, have: 0 };
+  const quest03 = { id: 3, trader: "Prapor", title: "The Punisher - Part 2", item: "Lower half-mask", need: 7, have: 0 };
+  const quest04 = { id: 4, trader: "Prapor", title: "The Punisher - Part 4", item: "Bars A-2607 95H18 knife", need: 5, have: 0 };
+  const quest05 = { id: 5, trader: "Prapor", title: "The Punisher - Part 5", item: "AK-74N assault rifle", need: 1, have: 0 };
+  const quest06 = { id: 6, trader: "Prapor", title: "The Punisher - Part 5", item: "M4A1 assault rifle", need: 1, have: 0 };
+  const quest07 = { id: 7, trader: "Prapor", title: "The Punisher - Part 5", item: "PM 9x18PM pistols", need: 2, have: 0 };
+  const quest08 = { id: 8, trader: "Prapor", title: "The Punisher - Part 6", item: "BEAR PMC dogtags", need: 7, have: 0 };
+  const quest09 = { id: 9, trader: "Prapor", title: "The Punisher - Part 6", item: "USEC PMC dogtags", need: 7, have: 0 };
+  const quest10 = { id: 10, trader: "Prapor", title: "Regulated Materials", item: "6-STEN-140-M military battery", need: 1, have: 0 };
+  const quest11 = { id: 11, trader: "Prapor", title: "Regulated Materials", item: "OFZ 30x160mm shells", need: 5, have: 0 };
+  const quest12 = { id: 12, trader: "Prapor", title: "No Offence", item: "Lower half-mask", need: 10, have: 0 };
+  const quest13 = { id: 13, trader: "Prapor", title: "Our Own Land", item: "Lower half-mask", need: 20, have: 0 };
   
   // add the quests to the database
   addQuest(quest01);
@@ -238,7 +206,7 @@ function addQuest(quest) {
   // prevent default - we don't want the form to submit in the conventional way
   // e.preventDefault();
   // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-  const newItem = { trader: quest.trader, title: quest.title, item: quest.item, need: quest.need, have: quest.have };
+  const newItem = { id: quest.id, trader: quest.trader, title: quest.title, item: quest.item, need: quest.need, have: quest.have };
   // open a read/write db transaction, ready for adding the data
   const transaction = db.transaction(['quests_os'], 'readwrite');
   // call an object store that's already been added to the database
@@ -254,7 +222,7 @@ function addQuest(quest) {
     console.log('Transaction completed: database modification finished.');
 
     // update the display of data to show the newly added item, by running displayData() again.
-    populateData();
+    displayData();
   });
 
   transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
