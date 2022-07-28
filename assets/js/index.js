@@ -54,20 +54,15 @@ openRequest.addEventListener('upgradeneeded', e => {
 
 
 function addOne(questID) {
-  // print questID
-  console.log('Finding quest ' + questID + ' in index...');
-
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  // const index = objectStore.index('id');
   const request = objectStore.get(questID);
 
   request.onerror = (event) => {
     // Handle errors!
     console.log('Transaction not opened due to error');
   };
-  // index.get(questID).onsuccess = (event) => {
   request.onsuccess = (event) => {
     // Get the old value that we want to update
     const data = event.target.result;
@@ -96,11 +91,13 @@ function subOne(questID) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index('id');
+  const request = objectStore.get(questID);
 
-  console.log('Finding quest ' + questID + ' in index...');
-  index.get(questID).onsuccess = (event) => {
-
+  request.onerror = (event) => {
+    // Handle errors!
+    console.log('Transaction not opened due to error');
+  };
+  request.onsuccess = (event) => {
     // Get the old value that we want to update
     const data = event.target.result;
 
