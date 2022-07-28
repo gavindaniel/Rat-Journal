@@ -85,14 +85,14 @@ function deleteItem(e) {
 }
 
 
-function addOne(questTitle) {
+function addOne(questID) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("title");
+  const index = objectStore.index("id");
 
-  // console.log('Finding quest ' + questTitle + ' in index...');
-  index.get(questTitle).onsuccess = (event) => {
+  console.log('Finding quest ' + questID + ' in index...');
+  index.get(questID).onsuccess = (event) => {
     // Get the old value that we want to update
     const data = event.target.result;
 
@@ -116,14 +116,14 @@ function addOne(questTitle) {
 }
 
 
-function subOne(questTitle) {
+function subOne(questID) {
   // open a database transaction and delete the task, finding it using the id we retrieved above
   const transaction = db.transaction(['quests_os'], 'readwrite');
   const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("title");
+  const index = objectStore.index("id");
 
-  // console.log('Finding quest ' + questTitle + ' in index...');
-  index.get(questTitle).onsuccess = (event) => {
+  console.log('Finding quest ' + questID + ' in index...');
+  index.get(questID).onsuccess = (event) => {
 
     // Get the old value that we want to update
     const data = event.target.result;
