@@ -5,7 +5,6 @@ const titleInput = document.querySelector('#title');
 const itemInput = document.querySelector('#item');
 const needInput = document.querySelector('#need');
 const haveInput = document.querySelector('#have');
-const questBtn = document.querySelector('#questBtn');
 
 // Create an instance of a db object for us to store the open database in
 let db;
@@ -193,16 +192,6 @@ function populateData() {
     // do something
     }
   });
-}
-
-
-
-function setPillIDs() {
-  // get all the elements
-  const elements = document.querySelectorAll('.pill');
-
-  // set their ids
-  for (var i = 0; i < abcElements.length; i++) { elements[i].id = 'pill-' + i; }
 }
 
 

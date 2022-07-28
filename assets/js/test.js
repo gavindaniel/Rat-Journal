@@ -1,3 +1,59 @@
+// Create needed constants
+const list = document.querySelector('ul');
+const traderInput = document.querySelector('#trader');
+const titleInput = document.querySelector('#title');
+const itemInput = document.querySelector('#item');
+const needInput = document.querySelector('#need');
+const haveInput = document.querySelector('#have');
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('form button');
+const questBtn = document.querySelector('#questBtn');
+
+// Create an instance of a db object for us to store the open database in
+let db;
+
+// Open our database; it is created if it doesn't already exist
+// (see the upgradeneeded handler below)
+const openRequest = window.indexedDB.open('quests_db', 1);
+
+
+// error handler signifies that the database didn't open successfully
+openRequest.addEventListener('error', () => console.error('Database failed to open'));
+
+// success handler signifies that the database opened successfully
+openRequest.addEventListener('success', () => {
+  console.log('Database opened successfully');
+  // Store the opened database object in the db variable. This is used a lot below
+  db = openRequest.result;
+  // Run the displayData() function to display the notes already in the IDB
+  displayData();
+});
+
+
+// Set up the database tables if this has not already been done
+openRequest.addEventListener('upgradeneeded', e => {
+  // Grab a reference to the opened database
+  db = e.target.result;
+  // Create an objectStore to store our notes in (basically like a single table)
+  // including a auto-incrementing key
+  const objectStore = db.createObjectStore('quests_os', { keyPath: 'id', autoIncrement:true });
+  // Define what data items the objectStore will contain
+  objectStore.createIndex('trader', 'trader', { unique: false });
+  objectStore.createIndex('title', 'title', { unique: false });
+  objectStore.createIndex('item', 'item', { unique: false });
+  objectStore.createIndex('need', 'need', { unique: false });
+  objectStore.createIndex('have', 'have', { unique: false });
+
+  console.log('Database setup complete');
+});
+
+
+// Create a submit event handler so that when the form is submitted the addData() function is run
+form.addEventListener('submit', addData);
+
+// Create a submit event handler so that when the form is submitted the addData() function is run
+questBtn.addEventListener("click", addPraporQuests);
+
 // Define the addData() function
 function addData(e) {
   // prevent default - we don't want the form to submit in the conventional way
@@ -24,12 +80,122 @@ function addData(e) {
     console.log('Transaction completed: database modification finished.');
 
     // update the display of data to show the newly added item, by running displayData() again.
-    // displayData();
-    populateData();
+    displayData();
   });
 
   transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
 }
+
+
+// Define the deleteItem() function
+function deleteItem(e) {
+  // retrieve the name of the task we want to delete. We need
+  // to convert it to a number before trying to use it with IDB; IDB key
+  // values are type-sensitive.
+  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
+
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const deleteRequest = objectStore.delete(questId);
+
+  // report that the data item has been deleted
+  transaction.addEventListener('complete', () => {
+    // delete the parent of the button
+    // which is the list item, so it is no longer displayed
+    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    console.log(`Quest ${questId} deleted.`);
+
+    // Again, if list item is empty, display a 'No notes stored' message
+    if(!list.firstChild) {
+      const listItem = document.createElement('li');
+      listItem.textContent = 'No notes stored.';
+      list.appendChild(listItem);
+    }
+  });
+}
+
+
+
+function addItem(e) {
+  // retrieve the name of the task we want to delete. We need
+  // to convert it to a number before trying to use it with IDB; IDB key
+  // values are type-sensitive.
+  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
+
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const request = objectStore.get(questId);
+
+  request.onerror = (event) => {
+    // Handle errors!
+    console.log('Transaction not opened due to error');
+  };
+  request.onsuccess = (event) => {
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update the value(s) in the object that you want to change
+    data.have = data.have + 1;
+
+    // Put this updated object back into the database.
+    const requestUpdate = objectStore.put(data);
+    requestUpdate.onerror = (event) => {
+       // Do something with the error
+       console.log('Failed to updated data.');
+    };
+    requestUpdate.onsuccess = (event) => {
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
+    };
+  };
+
+}
+
+
+
+function subItem(e) {
+  // retrieve the name of the task we want to delete. We need
+  // to convert it to a number before trying to use it with IDB; IDB key
+  // values are type-sensitive.
+  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
+
+  // open a database transaction and delete the task, finding it using the id we retrieved above
+  const transaction = db.transaction(['quests_os'], 'readwrite');
+  const objectStore = transaction.objectStore('quests_os');
+  const request = objectStore.get(questId);
+
+  request.onerror = (event) => {
+    // Handle errors!
+    console.log('Transaction not opened due to error');
+  };
+  request.onsuccess = (event) => {
+    // Get the old value that we want to update
+    const data = event.target.result;
+
+    // update the value(s) in the object that you want to change
+    data.have = data.have - 1;
+
+    // Put this updated object back into the database.
+    const requestUpdate = objectStore.put(data);
+
+    requestUpdate.onerror = (event) => {
+       // Do something with the error
+       console.log('Failed to updated data.');
+    };
+    requestUpdate.onsuccess = (event) => {
+      // Success - the data is updated!
+      console.log('Success - the data is updated!');
+      // update the display of data to show the newly added item, by running displayData() again.
+      displayData();
+    };
+  };
+
+}
+
 
 
 // Define the displayData() function
@@ -102,94 +268,12 @@ function displayData() {
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
       if(!list.firstChild) {
-        // const listItem = document.createElement('li');
-        // listItem.textContent = 'No quests stored.'
-        // list.appendChild(listItem);
-        console.log('No quests stored. Generating database...');
+        const listItem = document.createElement('li');
+        listItem.textContent = 'No quests stored.'
+        list.appendChild(listItem);
       }
       // if there are no more cursor items to iterate through, say so
       console.log('Quests all displayed');
     }
   });
-}
-
-
-
-function addItem(e) {
-  // retrieve the name of the task we want to delete. We need
-  // to convert it to a number before trying to use it with IDB; IDB key
-  // values are type-sensitive.
-  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
-
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  const objectStore = transaction.objectStore('quests_os');
-  const request = objectStore.get(questId);
-
-  request.onerror = (event) => {
-    // Handle errors!
-    console.log('Transaction not opened due to error');
-  };
-  request.onsuccess = (event) => {
-    // Get the old value that we want to update
-    const data = event.target.result;
-
-    // update the value(s) in the object that you want to change
-    data.have = data.have + 1;
-
-    // Put this updated object back into the database.
-    const requestUpdate = objectStore.put(data);
-    requestUpdate.onerror = (event) => {
-       // Do something with the error
-       console.log('Failed to updated data.');
-    };
-    requestUpdate.onsuccess = (event) => {
-      // Success - the data is updated!
-      console.log('Success - the data is updated!');
-      // update the display of data to show the newly added item, by running displayData() again.
-      // displayData();
-      populateData();
-    };
-  };
-}
-
-
-
-function subItem(e) {
-  // retrieve the name of the task we want to delete. We need
-  // to convert it to a number before trying to use it with IDB; IDB key
-  // values are type-sensitive.
-  const questId = Number(e.target.parentNode.getAttribute('data-quest-id'));
-
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  const objectStore = transaction.objectStore('quests_os');
-  const request = objectStore.get(questId);
-
-  request.onerror = (event) => {
-    // Handle errors!
-    console.log('Transaction not opened due to error');
-  };
-  request.onsuccess = (event) => {
-    // Get the old value that we want to update
-    const data = event.target.result;
-
-    // update the value(s) in the object that you want to change
-    data.have = data.have - 1;
-
-    // Put this updated object back into the database.
-    const requestUpdate = objectStore.put(data);
-
-    requestUpdate.onerror = (event) => {
-       // Do something with the error
-       console.log('Failed to updated data.');
-    };
-    requestUpdate.onsuccess = (event) => {
-      // Success - the data is updated!
-      console.log('Success - the data is updated!');
-      // update the display of data to show the newly added item, by running displayData() again.
-      // displayData();
-      populateData();
-    };
-  };
 }
