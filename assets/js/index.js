@@ -123,27 +123,6 @@ function subOne(questID) {
 
 
 // Define the populateData function
-function updateData(questTitle) {
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(['quests_os'], 'readwrite');
-  const objectStore = transaction.objectStore('quests_os');
-  const index = objectStore.index("title");
-
-  index.get(questTitle).onsuccess = (event) => {
-    // console.log(`Donna's SSN is ${event.target.result.ssn}`);
-
-    // Get the old value that we want to update
-    const data = event.target.result;
-
-    // update display - Debut
-    document.getElementById("pill-debut").innerHTML = data.have.toString();
-    document.getElementById("disp-debut").value  = data.have.toString();
-  };
-}
-
-
-
-// Define the populateData function
 function populateData() {
   // create index var, start at 1 for first quest
   var i = 1;
@@ -157,6 +136,13 @@ function populateData() {
       // do something
       document.getElementById("pill-" + i).innerHTML = cursor.value.have.toString() + "/" + cursor.value.need.toString();
       document.getElementById("disp-" + i).value  = cursor.value.have.toString();
+
+      // check if the have == need, if true, change the pill to green
+      if (cursor.value.have == cursor.value.need) {
+        $( "#pill-" + i ).removeClass( "bg-danger" ).addClass( "bg-success" );
+      } else { 
+        // do something
+      }
 
       // iterate to the next quest
       cursor.continue();
