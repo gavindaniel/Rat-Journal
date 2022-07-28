@@ -254,7 +254,6 @@ function addQuest(quest) {
     console.log('Transaction completed: database modification finished.');
 
     // update the display of data to show the newly added item, by running displayData() again.
-    // displayData();
     populateData();
   });
 
